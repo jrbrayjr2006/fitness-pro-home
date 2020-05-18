@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Test
+import org.springframework.test.web.servlet.MvcResult
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 import org.springframework.test.web.servlet.setup.MockMvcBuilders
 
@@ -24,8 +25,9 @@ class RegistrationControllerTest {
     fun shouldReturnStatusOk() {
         // Given
         val INPUT = CreateRegistraionDTO()
+        val mvcResult: MvcResult
         // When
-        requestBuilder.create(INPUT).andExpect(status().isOk)
+        mvcResult = requestBuilder.create(INPUT).andExpect(status().isOk).andReturn()
         // Then
     }
 }
