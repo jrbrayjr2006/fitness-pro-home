@@ -25,7 +25,7 @@ Swagger is used to document the APIs in this service.
 ```
 
 ## Testing
-//TODO
+Junit 5 is used for unit testing along with the Spring testing framewaork.
 
 ## References
 
